@@ -47,7 +47,7 @@ function UnifeedCase() {
           "The MVP I shipped looked nothing like my original idea — and that's exactly how it should work.",
       }}
       nextHref="/work/welearn"
-      nextLabel="02 — BELEARN"
+      nextLabel="02 — BeLearn"
     >
       <figure className="border border-border bg-paper overflow-hidden">
         <div className="border-b border-border px-4 py-2 flex items-center justify-between bg-secondary/40">
