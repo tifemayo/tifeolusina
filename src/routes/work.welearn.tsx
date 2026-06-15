@@ -8,13 +8,13 @@ import {
 export const Route = createFileRoute("/work/welearn")({
   head: () => ({
     meta: [
-      { title: "WeLearn — Inclusive tutoring marketplace · Tife Boluwatife" },
+      { title: "BELEARN — Inclusive tutoring marketplace · Tife Boluwatife" },
       {
         name: "description",
         content:
-          "Case study: building WeLearn, an inclusive tutoring marketplace covering SEN learners and African languages. 100+ waitlist signups across 28 countries, pre-launch at belearn.org.",
+          "Case study: building BELEARN, an inclusive tutoring marketplace covering SEN learners and African languages. 100+ waitlist signups across 28 countries, pre-launch at belearn.org.",
       },
-      { property: "og:title", content: "WeLearn — Case Study · Tife Boluwatife" },
+      { property: "og:title", content: "BELEARN — Case Study · Tife Boluwatife" },
       {
         property: "og:description",
         content: "The tutoring platform I wish had existed when I was teaching.",
@@ -27,10 +27,10 @@ export const Route = createFileRoute("/work/welearn")({
 function WeLearnCase() {
   return (
     <CaseStudyShell
-      fileNumber="02 / WeLearn"
+      fileNumber="02 / BELEARN"
       status="Pre-launch · 100+ waitlist"
       statusTone="muted"
-      title="WeLearn: an inclusive tutoring marketplace I had to build."
+      title="BELEARN: an inclusive tutoring marketplace I had to build."
       subtitle="The tutoring platform I wish had existed when I was teaching — for SEN learners and underrepresented subjects like African languages."
       meta={[
         { label: "Role", value: "Founder & Product Lead" },
@@ -44,13 +44,13 @@ function WeLearnCase() {
       annotation={{
         note: "Note 02 / Why",
         quote:
-          "I watched students light up when the right person explained something the right way. WeLearn is about making that match happen.",
+          "I watched students light up when the right person explained something the right way. BELEARN is about making that match happen.",
       }}
       nextHref="/work/unifeed"
       nextLabel="01 — Unifeed"
     >
       <ProductMockCard
-        label="WeLearn · Match preview"
+        label="BELEARN · Match preview"
         caption="Two-sided marketplace: learners on one side, specialist tutors on the other."
         rows={[
           { tag: "Subject", text: "GCSE Mathematics · Foundation tier" },
@@ -124,7 +124,7 @@ function WeLearnCase() {
           classroom environments. I watched students light up when the right person explained something the right
           way.{" "}
           <span className="text-accent font-medium">
-            WeLearn is about making that match happen — for every learner, not just the easy ones to serve.
+            BELEARN is about making that match happen — for every learner, not just the easy ones to serve.
           </span>
         </p>
       </CaseSection>

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Olusina Boluwatife: CS First Class, Forensic Tech Analyst at Deloitte. Building Unifeed (75 users validated) and WeLearn. Open to APM & Junior PM roles.",
+          "Portfolio of Olusina Boluwatife: CS First Class, Forensic Tech Analyst at Deloitte. Building Unifeed (75 users validated) and BELEARN. Open to APM & Junior PM roles.",
       },
       { property: "og:title", content: "Tife Boluwatife — Product Lead & APM Candidate" },
       {
@@ -96,7 +96,7 @@ function Index() {
             <div>Founder & Product Lead</div>
           </div>
           <div>
-            <div className="text-foreground font-semibold">WeLearn</div>
+            <div className="text-foreground font-semibold">BELEARN</div>
             <div>Founder · belearn.org</div>
           </div>
         </div>
@@ -125,7 +125,7 @@ function Index() {
           <CaseRow
             num="02"
             slug="/work/welearn"
-            title="WeLearn"
+            title="BELEARN"
             tagline="Inclusive tutoring marketplace"
             role="Founder & Product Lead"
             status="Pre-launch"
@@ -154,7 +154,7 @@ function Index() {
             <p>
               At Deloitte I do forensic data analysis on financial crime cases, which taught me how to make sense of
               complexity and communicate it clearly. Before that I spent three years tutoring students from age 6 to
-              university level — which is where WeLearn came from. Unifeed came from a problem I lived with daily.
+              university level — which is where BELEARN came from. Unifeed came from a problem I lived with daily.
             </p>
             <div className="pt-4">
               <Link
