@@ -28,7 +28,7 @@ export const Route = createFileRoute("/work/welearn")({
 function WeLearnCase() {
   return (
     <CaseStudyShell
-      fileNumber="02 / BELEARN"
+      fileNumber="02 / BeLearn"
       status="Pre-launch · 100+ waitlist"
       statusTone="muted"
       title="BeLearn: an inclusive tutoring marketplace I had to build."
