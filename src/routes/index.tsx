@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import coffeeSwirl from "../assets/coffee-swirl.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,12 +25,6 @@ function Index() {
     <div>
       {/* Hero */}
       <section className="relative max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-20 overflow-hidden">
-        <img
-          src={coffeeSwirl.url}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute -right-24 -top-10 w-[520px] max-w-[60%] opacity-[0.18] mix-blend-multiply hidden md:block"
-        />
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-8 animate-reveal">
           File 001 / Personal Record · Updated June 2026
         </div>
