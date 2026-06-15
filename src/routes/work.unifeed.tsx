@@ -3,8 +3,10 @@ import {
   CaseSection,
   CaseStudyShell,
   DataPanel,
-  ProductMockCard,
 } from "../components/CaseStudyShell";
+import unifeedHome from "../assets/unifeed-home.png.asset.json";
+import unifeedProfile from "../assets/unifeed-profile.png.asset.json";
+import unifeedSearch from "../assets/unifeed-search.png.asset.json";
 
 export const Route = createFileRoute("/work/unifeed")({
   head: () => ({
@@ -45,18 +47,30 @@ function UnifeedCase() {
           "The MVP I shipped looked nothing like my original idea — and that's exactly how it should work.",
       }}
       nextHref="/work/welearn"
-      nextLabel="02 — WeLearn"
+      nextLabel="02 — BELEARN"
     >
-      <ProductMockCard
-        label="Unifeed · Unified Feed"
-        caption="Snapshot of the validated MVP — one inbox across platforms."
-        rows={[
-          { tag: "Twitter", text: "Replied to 3 mentions · cleared in-app notifications" },
-          { tag: "Instagram", text: "DM thread: client follow-up — flagged for response" },
-          { tag: "LinkedIn", text: "New connection request from a recruiter" },
-          { tag: "Threads", text: "Mention in a thread about product portfolios" },
-        ]}
-      />
+      <figure className="border border-border bg-paper overflow-hidden">
+        <div className="border-b border-border px-4 py-2 flex items-center justify-between bg-secondary/40">
+          <div className="flex gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+            <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+            <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+          </div>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            Unifeed · Home (Desktop &amp; Mobile)
+          </span>
+          <span className="font-mono text-[10px] text-muted-foreground">v1.0</span>
+        </div>
+        <img
+          src={unifeedHome.url}
+          alt="Unifeed unified feed in desktop and mobile view, showing aggregated posts from Instagram, TikTok and Unifeed in a single timeline."
+          className="w-full block bg-paper"
+          loading="lazy"
+        />
+        <figcaption className="px-5 py-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-border">
+          One unified inbox across platforms — mobile abstracts the left/right rails to reduce cognitive load.
+        </figcaption>
+      </figure>
 
       <CaseSection num="01" title="The Problem">
         <p>
@@ -105,6 +119,31 @@ function UnifeedCase() {
           <span className="text-accent font-medium">Scope discipline is a product skill.</span>
         </p>
       </CaseSection>
+
+      <div className="grid md:grid-cols-2 gap-4">
+        <figure className="border border-border bg-paper overflow-hidden">
+          <img
+            src={unifeedProfile.url}
+            alt="Unifeed profile screen consolidating social identity across networks."
+            className="w-full block"
+            loading="lazy"
+          />
+          <figcaption className="px-4 py-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-border">
+            Profile · one identity, every platform
+          </figcaption>
+        </figure>
+        <figure className="border border-border bg-paper overflow-hidden">
+          <img
+            src={unifeedSearch.url}
+            alt="Unifeed cross-platform search results aggregated from TikTok, Instagram and Unifeed."
+            className="w-full block"
+            loading="lazy"
+          />
+          <figcaption className="px-4 py-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-border">
+            Search · cross-platform, one query
+          </figcaption>
+        </figure>
+      </div>
 
       <CaseSection num="05" title="Validation">
         <ul className="space-y-2 text-base list-none">
