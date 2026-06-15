@@ -83,9 +83,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Portfolio of Olusina Boluwatife (Tife): CS First Class, Forensic Tech Analyst at Deloitte, building Unifeed and WeLearn. Open to APM & Junior PM roles." },
       { name: "author", content: "Olusina Boluwatife" },
       { property: "og:title", content: "Tife Boluwatife — Product Lead & APM Candidate" },
-      { property: "og:description", content: "Product Lead & CS graduate turning real user problems into shipped, validated solutions." },
+      { property: "og:description", content: "Portfolio of Olusina Boluwatife (Tife): CS First Class, Forensic Tech Analyst at Deloitte, building Unifeed and WeLearn. Open to APM & Junior PM roles." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Tife Boluwatife — Product Lead & APM Candidate" },
+      { name: "twitter:description", content: "Portfolio of Olusina Boluwatife (Tife): CS First Class, Forensic Tech Analyst at Deloitte, building Unifeed and WeLearn. Open to APM & Junior PM roles." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3c0a6504-6eda-4a1e-851e-8023ad15ee12/id-preview-ef9b2375--ffbb069b-8f7d-4ce8-9d06-272964fe432e.lovable.app-1781530643180.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3c0a6504-6eda-4a1e-851e-8023ad15ee12/id-preview-ef9b2375--ffbb069b-8f7d-4ce8-9d06-272964fe432e.lovable.app-1781530643180.png" },
     ],
     links: [
       {
