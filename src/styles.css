@@ -67,31 +67,31 @@
 
 :root {
   --radius: 0.25rem;
-  /* Coffee archive — Almond Milk paper, Expresso ink */
-  --background: oklch(0.91 0.028 78);
-  --foreground: oklch(0.30 0.065 55);
-  --paper: oklch(0.94 0.022 80);
-  --ink: oklch(0.30 0.065 55);
+  /* Research Archive — warm paper, dark ink, archive red */
+  --background: oklch(0.96 0.008 85);
+  --foreground: oklch(0.20 0.015 260);
+  --paper: oklch(0.98 0.006 85);
+  --ink: oklch(0.20 0.015 260);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.30 0.065 55);
+  --card-foreground: oklch(0.20 0.015 260);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.30 0.065 55);
-  /* Primary — Expresso #61401E */
-  --primary: oklch(0.30 0.065 55);
-  --primary-foreground: oklch(0.94 0.022 80);
-  /* Secondary — Chocolate Milk #CAAB8A */
-  --secondary: oklch(0.76 0.045 72);
-  --secondary-foreground: oklch(0.30 0.065 55);
-  --muted: oklch(0.84 0.035 75);
-  --muted-foreground: oklch(0.47 0.058 55);
-  /* Accent — Cappuccino #A37C53 */
-  --accent: oklch(0.58 0.075 58);
-  --accent-foreground: oklch(0.96 0.018 80);
+  --popover-foreground: oklch(0.20 0.015 260);
+  /* Primary — deep ink */
+  --primary: oklch(0.20 0.015 260);
+  --primary-foreground: oklch(0.96 0.008 85);
+  /* Secondary — warm stone */
+  --secondary: oklch(0.88 0.012 80);
+  --secondary-foreground: oklch(0.20 0.015 260);
+  --muted: oklch(0.90 0.010 80);
+  --muted-foreground: oklch(0.50 0.025 260);
+  /* Accent — archive red */
+  --accent: oklch(0.55 0.165 25);
+  --accent-foreground: oklch(0.98 0.005 85);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.96 0.018 80);
-  --border: oklch(0.30 0.065 55 / 0.18);
-  --input: oklch(0.30 0.065 55 / 0.22);
-  --ring: oklch(0.58 0.075 58);
+  --border: oklch(0.20 0.015 260 / 0.12);
+  --input: oklch(0.20 0.015 260 / 0.16);
+  --ring: oklch(0.55 0.165 25);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
