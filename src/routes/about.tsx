@@ -7,7 +7,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Olusina Boluwatife (Tife): First Class CS graduate from Aston, Forensic Tech Analyst at Deloitte, founder of Unifeed and WeLearn. Moving into APM / Junior PM roles.",
+          "Olusina Boluwatife (Tife): First Class CS graduate from Aston, Forensic Tech Analyst at Deloitte, founder of Unifeed and BELEARN. Moving into APM / Junior PM roles.",
       },
       { property: "og:title", content: "About — Tife Boluwatife" },
       {
@@ -38,7 +38,7 @@ function AboutPage() {
             <p className="text-muted-foreground">
               I&apos;ve always been more interested in <em className="text-accent not-italic font-medium">why</em>{" "}
               something gets built than how — though I can do both. I started building Unifeed because I was genuinely
-              frustrated by the problem. I&apos;m building WeLearn because I&apos;ve seen the gap it fills with my own
+              frustrated by the problem. I&apos;m building BELEARN because I&apos;ve seen the gap it fills with my own
               eyes.
             </p>
             <p className="text-muted-foreground">
@@ -84,7 +84,7 @@ function AboutPage() {
               label="Currently"
               items={[
                 ["Role", "Forensic Tech Analyst, Deloitte"],
-                ["Building", "Unifeed · WeLearn"],
+                ["Building", "Unifeed · BELEARN"],
                 ["Location", "United Kingdom"],
                 ["Open to", "APM / Junior PM"],
               ]}
