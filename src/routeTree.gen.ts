@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkWelearnRouteImport } from './routes/work.welearn'
 import { Route as WorkUnifeedRouteImport } from './routes/work.unifeed'
 
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,36 +37,47 @@ const WorkUnifeedRoute = WorkUnifeedRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/work/unifeed': typeof WorkUnifeedRoute
   '/work/welearn': typeof WorkWelearnRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/work/unifeed': typeof WorkUnifeedRoute
   '/work/welearn': typeof WorkWelearnRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/work/unifeed': typeof WorkUnifeedRoute
   '/work/welearn': typeof WorkWelearnRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/work/unifeed' | '/work/welearn'
+  fullPaths: '/' | '/about' | '/work/unifeed' | '/work/welearn'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/work/unifeed' | '/work/welearn'
-  id: '__root__' | '/' | '/work/unifeed' | '/work/welearn'
+  to: '/' | '/about' | '/work/unifeed' | '/work/welearn'
+  id: '__root__' | '/' | '/about' | '/work/unifeed' | '/work/welearn'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   WorkUnifeedRoute: typeof WorkUnifeedRoute
   WorkWelearnRoute: typeof WorkWelearnRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   WorkUnifeedRoute: WorkUnifeedRoute,
   WorkWelearnRoute: WorkWelearnRoute,
 }
