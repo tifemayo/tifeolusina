@@ -126,7 +126,7 @@ function Index() {
           <CaseRow
             num="02"
             slug="/work/welearn"
-            title="BeLearn"
+            title="BELEARN"
             tagline="Inclusive tutoring marketplace"
             role="Founder & Product Lead"
             status="Pre-launch"
