@@ -85,13 +85,13 @@
   --muted: oklch(0.90 0.010 80);
   --muted-foreground: oklch(0.50 0.025 260);
   /* Accent — archive red */
-  --accent: oklch(0.55 0.165 25);
+  --accent: oklch(0.50 0.11 55);
   --accent-foreground: oklch(0.98 0.005 85);
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: oklch(0.45 0.12 50);
   --destructive-foreground: oklch(0.96 0.018 80);
   --border: oklch(0.20 0.015 260 / 0.12);
   --input: oklch(0.20 0.015 260 / 0.16);
-  --ring: oklch(0.55 0.165 25);
+  --ring: oklch(0.50 0.11 55);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
