@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import coffeeSwirl from "../assets/coffee-swirl.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,11 +24,17 @@ function Index() {
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-20">
+      <section className="relative max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-20 overflow-hidden">
+        <img
+          src={coffeeSwirl.url}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute -right-24 -top-10 w-[520px] max-w-[60%] opacity-[0.18] mix-blend-multiply hidden md:block"
+        />
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-8 animate-reveal">
           File 001 / Personal Record · Updated June 2026
         </div>
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="relative grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-8 animate-reveal">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance mb-8 leading-[0.95]">
               Hi, I&apos;m Tife. I build products people actually use.

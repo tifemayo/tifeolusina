@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   CaseSection,
   CaseStudyShell,
-  ProductMockCard,
 } from "../components/CaseStudyShell";
+import belearnHero from "../assets/belearn-hero.png.asset.json";
+import belearnFeature from "../assets/belearn-feature.png.asset.json";
 
 export const Route = createFileRoute("/work/welearn")({
   head: () => ({
@@ -49,16 +50,28 @@ function WeLearnCase() {
       nextHref="/work/unifeed"
       nextLabel="01 — Unifeed"
     >
-      <ProductMockCard
-        label="BELEARN · Match preview"
-        caption="Two-sided marketplace: learners on one side, specialist tutors on the other."
-        rows={[
-          { tag: "Subject", text: "GCSE Mathematics · Foundation tier" },
-          { tag: "SEN", text: "Dyslexia-aware tutor with specialist training" },
-          { tag: "Language", text: "Yoruba — heritage learner track (pilot)" },
-          { tag: "Match", text: "3 tutors shortlisted · 1 booked trial session" },
-        ]}
-      />
+      <figure className="border border-border bg-paper overflow-hidden">
+        <div className="border-b border-border px-4 py-2 flex items-center justify-between bg-secondary/40">
+          <div className="flex gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+            <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+            <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+          </div>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            belearn.org · Landing
+          </span>
+          <span className="font-mono text-[10px] text-muted-foreground">Live</span>
+        </div>
+        <img
+          src={belearnHero.url}
+          alt="BELEARN landing page — 'Tutoring that sees everyone' with waitlist signup form."
+          className="w-full block"
+          loading="lazy"
+        />
+        <figcaption className="px-5 py-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-border">
+          Live at belearn.org — 100+ waitlist signups across 28 countries, pre paid acquisition.
+        </figcaption>
+      </figure>
 
       <CaseSection num="01" title="The Problem">
         <p>
@@ -120,7 +133,7 @@ function WeLearnCase() {
 
       <CaseSection num="04" title="Why this matters to me">
         <p>
-          I didn&apos;t come up with WeLearn in a vacuum. I taught coding to kids who struggled in traditional
+          I didn&apos;t come up with BELEARN in a vacuum. I taught coding to kids who struggled in traditional
           classroom environments. I watched students light up when the right person explained something the right
           way.{" "}
           <span className="text-accent font-medium">
@@ -128,6 +141,18 @@ function WeLearnCase() {
           </span>
         </p>
       </CaseSection>
+
+      <figure className="border border-border bg-paper overflow-hidden">
+        <img
+          src={belearnFeature.url}
+          alt="BELEARN — Learn anything Be anything section showing global relatable tutors and smart matching."
+          className="w-full block"
+          loading="lazy"
+        />
+        <figcaption className="px-5 py-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-border">
+          Positioning · global, relatable tutors paired by how each learner learns best.
+        </figcaption>
+      </figure>
 
       <div className="border border-border bg-paper/60 p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
