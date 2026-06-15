@@ -28,10 +28,10 @@ export const Route = createFileRoute("/work/welearn")({
 function WeLearnCase() {
   return (
     <CaseStudyShell
-      fileNumber="02 / BeLearn"
+      fileNumber="02 / BELEARN"
       status="Pre-launch · 100+ waitlist"
       statusTone="muted"
-      title="BeLearn: an inclusive tutoring marketplace I had to build."
+      title="BELEARN: an inclusive tutoring marketplace I had to build."
       subtitle="The tutoring platform I wish had existed when I was teaching — for SEN learners and underrepresented subjects like African languages."
       meta={[
         { label: "Role", value: "Founder & Product Lead" },
