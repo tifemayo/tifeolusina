@@ -63,7 +63,7 @@ function Index() {
                 </div>
               </div>
               <div className="animate-reveal" style={{ animationDelay: "220ms" }}>
-                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">~50%</div>
+                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">50%</div>
                 <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
                   Reduction in platform-switching time
                 </div>
