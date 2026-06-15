@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WorkWelearnRouteImport } from './routes/work.welearn'
 import { Route as WorkUnifeedRouteImport } from './routes/work.unifeed'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkWelearnRoute = WorkWelearnRouteImport.update({
+  id: '/work/welearn',
+  path: '/work/welearn',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkUnifeedRoute = WorkUnifeedRouteImport.update({
@@ -26,27 +32,31 @@ const WorkUnifeedRoute = WorkUnifeedRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/work/unifeed': typeof WorkUnifeedRoute
+  '/work/welearn': typeof WorkWelearnRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/work/unifeed': typeof WorkUnifeedRoute
+  '/work/welearn': typeof WorkWelearnRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/work/unifeed': typeof WorkUnifeedRoute
+  '/work/welearn': typeof WorkWelearnRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/work/unifeed'
+  fullPaths: '/' | '/work/unifeed' | '/work/welearn'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/work/unifeed'
-  id: '__root__' | '/' | '/work/unifeed'
+  to: '/' | '/work/unifeed' | '/work/welearn'
+  id: '__root__' | '/' | '/work/unifeed' | '/work/welearn'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   WorkUnifeedRoute: typeof WorkUnifeedRoute
+  WorkWelearnRoute: typeof WorkWelearnRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/welearn': {
+      id: '/work/welearn'
+      path: '/work/welearn'
+      fullPath: '/work/welearn'
+      preLoaderRoute: typeof WorkWelearnRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/unifeed': {
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   WorkUnifeedRoute: WorkUnifeedRoute,
+  WorkWelearnRoute: WorkWelearnRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
