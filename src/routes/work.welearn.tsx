@@ -133,7 +133,7 @@ function WeLearnCase() {
 
       <CaseSection num="04" title="Why this matters to me">
         <p>
-          I didn&apos;t come up with WeLearn in a vacuum. I taught coding to kids who struggled in traditional
+          I didn&apos;t come up with BELEARN in a vacuum. I taught coding to kids who struggled in traditional
           classroom environments. I watched students light up when the right person explained something the right
           way.{" "}
           <span className="text-accent font-medium">
