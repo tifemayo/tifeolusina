@@ -23,7 +23,7 @@ function AboutPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-24">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-8 animate-reveal">
-        File 002 / Operator Record
+        File 002 · About
       </div>
       <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="lg:col-span-7 animate-reveal">

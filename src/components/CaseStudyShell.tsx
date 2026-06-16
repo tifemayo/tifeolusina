@@ -40,7 +40,7 @@ export function CaseStudyShell({
             hash="work"
             className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors"
           >
-            ← Index
+            ← Projects
           </Link>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
             File {fileNumber}
@@ -106,7 +106,7 @@ export function CaseStudyShell({
       {/* Next */}
       <div className="border-t border-border py-12 flex items-center justify-between">
         <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-          Next record
+          Next project
         </span>
         <Link
           to={nextHref}

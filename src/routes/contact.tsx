@@ -50,7 +50,7 @@ function ContactPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-24">
       <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-8 animate-reveal">
-        File 003 / Open Channel
+        File 003 · Contact
       </div>
       <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="lg:col-span-5 animate-reveal">
@@ -75,7 +75,7 @@ function ContactPage() {
             noValidate
           >
             <div className="font-mono text-[10px] uppercase tracking-widest text-accent">
-              Transmission Form / 001
+              Contact Form
             </div>
             <Field
               label="Name"
@@ -120,7 +120,7 @@ function ContactPage() {
               type="submit"
               className="w-full py-4 bg-foreground text-background font-mono text-xs uppercase tracking-widest hover:bg-accent transition-colors"
             >
-              {sent ? "Sent — check your mail client" : "Send transmission →"}
+              {sent ? "Sent — check your mail client" : "Send message →"}
             </button>
           </form>
         </div>

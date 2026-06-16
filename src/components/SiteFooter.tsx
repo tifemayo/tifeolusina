@@ -29,7 +29,7 @@ export function SiteFooter() {
               Navigate
             </div>
             <Link to="/" className="block text-sm font-medium hover:text-accent transition-colors">
-              Index
+              Home
             </Link>
             <Link to="/about" className="block text-sm font-medium hover:text-accent transition-colors">
               About
@@ -40,13 +40,13 @@ export function SiteFooter() {
           </div>
           <div className="space-y-3">
             <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-              Records
+              Projects
             </div>
             <Link to="/work/unifeed" className="block text-sm font-medium hover:text-accent transition-colors">
               01 — Unifeed
             </Link>
             <Link to="/work/welearn" className="block text-sm font-medium hover:text-accent transition-colors">
-              02 — WeLearn
+              02 — BELEARN
             </Link>
             <a
               href="/Tife_Boluwatife_CV.pdf"
