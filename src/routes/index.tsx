@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-
+import unifeedHome from "../assets/unifeed-home.png.asset.json";
+import belearnHero from "../assets/belearn-hero.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,7 +27,7 @@ function Index() {
       {/* Hero */}
       <section className="relative max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-20 overflow-hidden">
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-8 animate-reveal">
-          File 001 / Personal Record · Updated June 2026
+          File 001 · Updated June 2026
         </div>
         <div className="relative grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-8 animate-reveal">
@@ -42,7 +43,7 @@ function Index() {
                 href="#work"
                 className="px-6 py-3 bg-foreground text-background font-mono text-xs uppercase tracking-widest hover:bg-accent transition-colors"
               >
-                See my work
+                See the projects
               </a>
               <a
                 href="/Tife_Boluwatife_CV.pdf"
@@ -57,15 +58,15 @@ function Index() {
           <div className="lg:col-span-4 flex flex-col justify-end">
             <div className="space-y-8 border-l border-border pl-8">
               <div className="animate-reveal" style={{ animationDelay: "150ms" }}>
-                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">75</div>
+                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">1,100+</div>
                 <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
-                  Users tested Unifeed end-to-end
+                  BELEARN waitlist · 28 countries
                 </div>
               </div>
               <div className="animate-reveal" style={{ animationDelay: "220ms" }}>
-                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">50%</div>
+                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">75</div>
                 <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
-                  Reduction in platform-switching time
+                  Users tested Unifeed end-to-end
                 </div>
               </div>
               <div className="animate-reveal" style={{ animationDelay: "290ms" }}>
@@ -73,7 +74,7 @@ function Index() {
                   4.5<span className="text-2xl text-muted-foreground">/5</span>
                 </div>
                 <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
-                  Average user satisfaction score
+                  Avg. user satisfaction (Unifeed)
                 </div>
               </div>
             </div>
