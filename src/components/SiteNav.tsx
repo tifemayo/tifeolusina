@@ -17,7 +17,7 @@ export function SiteNav() {
             className="hover:text-accent transition-colors text-foreground"
             activeOptions={{ exact: true }}
           >
-            Index
+            Projects
           </Link>
           <Link to="/about" className="hover:text-accent transition-colors" activeProps={{ className: "text-accent" }}>
             About

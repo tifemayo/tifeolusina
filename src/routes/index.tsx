@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-
+import unifeedHome from "../assets/unifeed-home.png.asset.json";
+import belearnHero from "../assets/belearn-hero.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,7 +27,7 @@ function Index() {
       {/* Hero */}
       <section className="relative max-w-6xl mx-auto px-6 pt-20 md:pt-28 pb-20 overflow-hidden">
         <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-8 animate-reveal">
-          File 001 / Personal Record · Updated June 2026
+          File 001 · Updated June 2026
         </div>
         <div className="relative grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-8 animate-reveal">
@@ -42,7 +43,7 @@ function Index() {
                 href="#work"
                 className="px-6 py-3 bg-foreground text-background font-mono text-xs uppercase tracking-widest hover:bg-accent transition-colors"
               >
-                See my work
+                See the projects
               </a>
               <a
                 href="/Tife_Boluwatife_CV.pdf"
@@ -57,15 +58,15 @@ function Index() {
           <div className="lg:col-span-4 flex flex-col justify-end">
             <div className="space-y-8 border-l border-border pl-8">
               <div className="animate-reveal" style={{ animationDelay: "150ms" }}>
-                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">75</div>
+                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">1,100+</div>
                 <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
-                  Users tested Unifeed end-to-end
+                  BELEARN waitlist · 28 countries
                 </div>
               </div>
               <div className="animate-reveal" style={{ animationDelay: "220ms" }}>
-                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">50%</div>
+                <div className="text-4xl md:text-5xl font-bold tabular-nums tracking-tighter">75</div>
                 <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
-                  Reduction in platform-switching time
+                  Users tested Unifeed end-to-end
                 </div>
               </div>
               <div className="animate-reveal" style={{ animationDelay: "290ms" }}>
@@ -73,7 +74,7 @@ function Index() {
                   4.5<span className="text-2xl text-muted-foreground">/5</span>
                 </div>
                 <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
-                  Average user satisfaction score
+                  Avg. user satisfaction (Unifeed)
                 </div>
               </div>
             </div>
@@ -105,33 +106,48 @@ function Index() {
 
       {/* Work Index */}
       <section id="work" className="max-w-6xl mx-auto px-6 py-24 scroll-mt-20">
-        <div className="flex items-baseline justify-between border-b border-foreground/20 pb-4 mb-2">
-          <h2 className="font-mono text-xs uppercase tracking-widest">Selected Records (01—02)</h2>
+        <div className="flex items-baseline justify-between border-b border-foreground/20 pb-4 mb-12">
+          <h2 className="font-mono text-xs uppercase tracking-widest">Projects (01—02)</h2>
           <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
             Sort: Impact / Status
           </span>
         </div>
 
-        <div className="divide-y divide-border">
-          <CaseRow
+        <div className="space-y-16">
+          <FeaturedCase
             num="01"
             slug="/work/unifeed"
             title="Unifeed"
-            tagline="Unified social media platform"
+            tagline="A unified social media platform that cut platform-switching time roughly in half — built end to end and tested with 75 real users."
             role="Product Lead — End to End"
             status="Shipped"
             statusTone="accent"
             timeline="Jan 2024 — Mar 2025"
+            image={unifeedHome.url}
+            imageAlt="Unifeed unified feed across desktop and mobile."
+            metrics={[
+              { value: "75", label: "Users tested" },
+              { value: "−50%", label: "Switching time" },
+              { value: "4.5/5", label: "Satisfaction" },
+            ]}
           />
-          <CaseRow
+          <FeaturedCase
             num="02"
             slug="/work/welearn"
             title="BELEARN"
-            tagline="Inclusive tutoring marketplace"
+            tagline="An inclusive tutoring marketplace covering SEN learners and African languages — 1,100+ waitlist signups across 28 countries, pre any paid acquisition."
             role="Founder & Product Lead"
             status="Pre-launch"
             statusTone="muted"
-            timeline="2025 — Present · 100+ waitlist, 28 countries"
+            timeline="2025 — Present"
+            image={belearnHero.url}
+            imageAlt="BELEARN landing page with waitlist signup."
+            metrics={[
+              { value: "1,100+", label: "Waitlist users" },
+              { value: "28", label: "Countries" },
+              { value: "£0", label: "Ad spend" },
+            ]}
+            reverse
           />
         </div>
       </section>
@@ -141,7 +157,7 @@ function Index() {
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <div className="font-mono text-[10px] uppercase tracking-widest text-accent">
-              File 002 / Operator
+              File · About
             </div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mt-4">
               An analyst&apos;s rigor. A builder&apos;s instinct.
@@ -162,7 +178,7 @@ function Index() {
                 to="/about"
                 className="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors border-b border-border hover:border-accent pb-1"
               >
-                Read the full file →
+                More about me →
               </Link>
             </div>
           </div>
@@ -172,7 +188,7 @@ function Index() {
   );
 }
 
-function CaseRow({
+function FeaturedCase({
   num,
   slug,
   title,
@@ -181,6 +197,10 @@ function CaseRow({
   status,
   statusTone,
   timeline,
+  image,
+  imageAlt,
+  metrics,
+  reverse = false,
 }: {
   num: string;
   slug: "/work/unifeed" | "/work/welearn";
@@ -190,37 +210,78 @@ function CaseRow({
   status: string;
   statusTone: "accent" | "muted";
   timeline: string;
+  image: string;
+  imageAlt: string;
+  metrics: { value: string; label: string }[];
+  reverse?: boolean;
 }) {
   return (
     <Link
       to={slug}
-      className="group block py-8 transition-colors hover:bg-secondary/50 -mx-4 px-4 rounded-sm"
+      className="folder group block p-6 md:p-10"
     >
-      <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 items-center">
-        <div className="lg:col-span-1 font-mono text-xs text-muted-foreground">{num}</div>
-        <div className="lg:col-span-4">
-          <h3 className="text-2xl md:text-3xl font-bold tracking-tight group-hover:text-accent transition-colors">
+      <span
+        className={
+          statusTone === "accent"
+            ? "folder-stamp"
+            : "folder-stamp !text-muted-foreground"
+        }
+        style={statusTone === "muted" ? { borderColor: "var(--color-muted-foreground)" } : undefined}
+      >
+        {status}
+      </span>
+      <div className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-center ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
+        <div className="lg:col-span-7">
+          <div className="border border-border bg-secondary/40 overflow-hidden">
+            <div className="border-b border-border px-4 py-2 flex items-center justify-between bg-paper">
+              <div className="flex gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+                <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+                <span className="w-2.5 h-2.5 rounded-full bg-foreground/15" />
+              </div>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                {title} · Preview
+              </span>
+              <span className="font-mono text-[10px] text-muted-foreground">{num}</span>
+            </div>
+            <img
+              src={image}
+              alt={imageAlt}
+              loading="lazy"
+              className="w-full block transition-transform duration-700 group-hover:scale-[1.02]"
+            />
+          </div>
+        </div>
+        <div className="lg:col-span-5 space-y-6">
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            File {num} · {timeline}
+          </div>
+          <h3 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.05] group-hover:text-accent transition-colors">
             {title}
           </h3>
-          <p className="text-sm text-muted-foreground mt-1">{tagline}</p>
-        </div>
-        <div className="lg:col-span-3 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
-          {role}
-          <div className="text-foreground/70 normal-case tracking-normal text-xs mt-1 font-sans">{timeline}</div>
-        </div>
-        <div className="lg:col-span-2">
-          <span
-            className={
-              statusTone === "accent"
-                ? "px-2 py-1 bg-accent/10 text-accent font-mono text-[10px] uppercase font-bold tracking-wider"
-                : "px-2 py-1 bg-foreground/5 text-muted-foreground font-mono text-[10px] uppercase font-bold tracking-wider"
-            }
-          >
-            {status}
-          </span>
-        </div>
-        <div className="lg:col-span-2 text-right">
-          <span className="font-mono text-xs group-hover:text-accent transition-colors">Read file →</span>
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-pretty">
+            {tagline}
+          </p>
+          <div className="grid grid-cols-3 gap-4 pt-2 border-t border-border">
+            {metrics.map((m) => (
+              <div key={m.label} className="pt-4">
+                <div className="text-xl md:text-2xl font-bold tabular-nums tracking-tight">
+                  {m.value}
+                </div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mt-1 leading-tight">
+                  {m.label}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center justify-between pt-2">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+              {role}
+            </span>
+            <span className="font-mono text-xs uppercase tracking-widest text-accent group-hover:translate-x-1 transition-transform">
+              Open case →
+            </span>
+          </div>
         </div>
       </div>
     </Link>

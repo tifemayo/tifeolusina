@@ -67,31 +67,31 @@
 
 :root {
   --radius: 0.25rem;
-  /* Research Archive — warm paper, dark ink, archive red */
-  --background: oklch(0.96 0.008 85);
-  --foreground: oklch(0.20 0.015 260);
-  --paper: oklch(0.98 0.006 85);
-  --ink: oklch(0.20 0.015 260);
+  /* Case File — cream paper, espresso ink, cognac accent */
+  --background: oklch(0.955 0.018 75);
+  --foreground: oklch(0.22 0.025 55);
+  --paper: oklch(0.975 0.014 75);
+  --ink: oklch(0.22 0.025 55);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.20 0.015 260);
+  --card-foreground: oklch(0.22 0.025 55);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.20 0.015 260);
-  /* Primary — deep ink */
-  --primary: oklch(0.20 0.015 260);
-  --primary-foreground: oklch(0.96 0.008 85);
-  /* Secondary — warm stone */
-  --secondary: oklch(0.88 0.012 80);
-  --secondary-foreground: oklch(0.20 0.015 260);
-  --muted: oklch(0.90 0.010 80);
-  --muted-foreground: oklch(0.50 0.025 260);
-  /* Accent — archive red */
-  --accent: oklch(0.50 0.11 55);
-  --accent-foreground: oklch(0.98 0.005 85);
-  --destructive: oklch(0.45 0.12 50);
-  --destructive-foreground: oklch(0.96 0.018 80);
-  --border: oklch(0.20 0.015 260 / 0.12);
-  --input: oklch(0.20 0.015 260 / 0.16);
-  --ring: oklch(0.50 0.11 55);
+  --popover-foreground: oklch(0.22 0.025 55);
+  /* Primary — espresso */
+  --primary: oklch(0.22 0.025 55);
+  --primary-foreground: oklch(0.96 0.018 75);
+  /* Secondary — nude stone */
+  --secondary: oklch(0.90 0.022 70);
+  --secondary-foreground: oklch(0.22 0.025 55);
+  --muted: oklch(0.92 0.018 72);
+  --muted-foreground: oklch(0.46 0.030 55);
+  /* Accent — cognac / caramel brown */
+  --accent: oklch(0.52 0.095 52);
+  --accent-foreground: oklch(0.97 0.018 75);
+  --destructive: oklch(0.45 0.12 40);
+  --destructive-foreground: oklch(0.96 0.018 75);
+  --border: oklch(0.30 0.030 55 / 0.16);
+  --input: oklch(0.30 0.030 55 / 0.20);
+  --ring: oklch(0.52 0.095 52);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -166,4 +166,64 @@
 }
 .animate-reveal {
   animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ---------- Case-folder hover for project cards ---------- */
+.folder {
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: top center;
+  will-change: transform;
+}
+.folder::before {
+  content: "";
+  position: absolute;
+  inset: -10px 8% auto 8%;
+  height: 18px;
+  background: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  transform-origin: bottom center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+}
+.folder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  z-index: 1;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.folder > * {
+  position: relative;
+  z-index: 2;
+}
+.folder:hover {
+  transform: translateY(-4px);
+}
+.folder:hover::before {
+  transform: translateY(-6px) rotateX(8deg);
+}
+.folder:hover::after {
+  box-shadow: 0 24px 48px -24px oklch(0.22 0.025 55 / 0.25);
+}
+.folder-stamp {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+  padding: 4px 8px;
+  transform: rotate(-4deg);
+  opacity: 0.85;
 }

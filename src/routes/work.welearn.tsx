@@ -13,7 +13,7 @@ export const Route = createFileRoute("/work/welearn")({
       {
         name: "description",
         content:
-          "Case study: building BELEARN, an inclusive tutoring marketplace covering SEN learners and African languages. 100+ waitlist signups across 28 countries, pre-launch at belearn.org.",
+          "Case study: building BELEARN, an inclusive tutoring marketplace covering SEN learners and African languages. 1,100+ waitlist signups across 28 countries, pre-launch at belearn.org.",
       },
       { property: "og:title", content: "BELEARN — Case Study · Tife Boluwatife" },
       {
@@ -29,14 +29,14 @@ function WeLearnCase() {
   return (
     <CaseStudyShell
       fileNumber="02 / BELEARN"
-      status="Pre-launch · 100+ waitlist"
+      status="Pre-launch · 1,100+ waitlist"
       statusTone="muted"
       title="BELEARN: an inclusive tutoring marketplace I had to build."
       subtitle="The tutoring platform I wish had existed when I was teaching — for SEN learners and underrepresented subjects like African languages."
       meta={[
         { label: "Role", value: "Founder & Product Lead" },
         { label: "Status", value: "Pre-launch · website live at belearn.org" },
-        { label: "Early Traction", value: "100+ waitlist signups across 28 countries", emphasis: true },
+        { label: "Early Traction", value: "1,100+ waitlist signups across 28 countries", emphasis: true },
         {
           label: "Scope",
           value: "Discovery, two-sided PRD, brand, marketplace strategy, accessibility model",
@@ -69,7 +69,7 @@ function WeLearnCase() {
           loading="lazy"
         />
         <figcaption className="px-5 py-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-border">
-          Live at belearn.org — 100+ waitlist signups across 28 countries, pre paid acquisition.
+          Live at belearn.org — 1,100+ waitlist signups across 28 countries, pre paid acquisition.
         </figcaption>
       </figure>
 
@@ -126,7 +126,7 @@ function WeLearnCase() {
           >
             belearn.org
           </a>{" "}
-          with 100+ waitlist signups across 28 countries before any paid acquisition. Booking flow and tutor onboarding
+          with 1,100+ waitlist signups across 28 countries before any paid acquisition. Booking flow and tutor onboarding
           are the next milestones.
         </p>
       </CaseSection>
