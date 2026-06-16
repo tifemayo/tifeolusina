@@ -106,33 +106,48 @@ function Index() {
 
       {/* Work Index */}
       <section id="work" className="max-w-6xl mx-auto px-6 py-24 scroll-mt-20">
-        <div className="flex items-baseline justify-between border-b border-foreground/20 pb-4 mb-2">
-          <h2 className="font-mono text-xs uppercase tracking-widest">Selected Records (01—02)</h2>
+        <div className="flex items-baseline justify-between border-b border-foreground/20 pb-4 mb-12">
+          <h2 className="font-mono text-xs uppercase tracking-widest">Projects (01—02)</h2>
           <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
             Sort: Impact / Status
           </span>
         </div>
 
-        <div className="divide-y divide-border">
-          <CaseRow
+        <div className="space-y-16">
+          <FeaturedCase
             num="01"
             slug="/work/unifeed"
             title="Unifeed"
-            tagline="Unified social media platform"
+            tagline="A unified social media platform that cut platform-switching time roughly in half — built end to end and tested with 75 real users."
             role="Product Lead — End to End"
             status="Shipped"
             statusTone="accent"
             timeline="Jan 2024 — Mar 2025"
+            image={unifeedHome.url}
+            imageAlt="Unifeed unified feed across desktop and mobile."
+            metrics={[
+              { value: "75", label: "Users tested" },
+              { value: "−50%", label: "Switching time" },
+              { value: "4.5/5", label: "Satisfaction" },
+            ]}
           />
-          <CaseRow
+          <FeaturedCase
             num="02"
             slug="/work/welearn"
             title="BELEARN"
-            tagline="Inclusive tutoring marketplace"
+            tagline="An inclusive tutoring marketplace covering SEN learners and African languages — 1,100+ waitlist signups across 28 countries, pre any paid acquisition."
             role="Founder & Product Lead"
             status="Pre-launch"
             statusTone="muted"
-            timeline="2025 — Present · 100+ waitlist, 28 countries"
+            timeline="2025 — Present"
+            image={belearnHero.url}
+            imageAlt="BELEARN landing page with waitlist signup."
+            metrics={[
+              { value: "1,100+", label: "Waitlist users" },
+              { value: "28", label: "Countries" },
+              { value: "£0", label: "Ad spend" },
+            ]}
+            reverse
           />
         </div>
       </section>
@@ -142,7 +157,7 @@ function Index() {
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <div className="font-mono text-[10px] uppercase tracking-widest text-accent">
-              File 002 / Operator
+              File · About
             </div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mt-4">
               An analyst&apos;s rigor. A builder&apos;s instinct.
@@ -163,7 +178,7 @@ function Index() {
                 to="/about"
                 className="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors border-b border-border hover:border-accent pb-1"
               >
-                Read the full file →
+                More about me →
               </Link>
             </div>
           </div>
